@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random India Facts</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/india-1838879_1280.jpg') no-repeat center center/cover;
+  }
+  #factBox {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+  }
+  button {
+    background-color: #FF9933; /* Saffron color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #138808; /* Green color */
+  }
+  p {
+    color: #004B87; /* A deep blue for contrast */
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+<div id="factBox">
+  <p id="fact">Click the button to learn a new fact about India!</p>
+  <button onclick="showNewFact()">New Facts Please</button>
+</div>
+
+<script>
+  const facts = [
+    "India is the world's largest democracy.",
+    "The name 'India' is derived from the River Indus.",
+    "India has the second-largest population in the world.",
+    "Chess was invented in India.",
+    "India is the largest producer of spices in the world.",
+    "Bollywood is the largest film industry in the world by film production.",
+    "The Indian railway system is the fourth largest in the world by size.",
+    "Yoga originated in India over 5,000 years ago."
+  ];
+
+  function showNewFact() {
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById('fact').innerText = fact;
+  }
+</script>
+</body>
+</html>
